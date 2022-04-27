@@ -5,6 +5,7 @@ import {
   MailIcon
 } from '@heroicons/react/outline'
 import './Pages.sass'
+import RepoList from '../components/repolist/RepoList'
 
 function Detail() {
   return (
@@ -37,6 +38,7 @@ function Detail() {
             </div>
           </div>
         </Card>
+        <RepoList />
       </div>
     </div>
   )
