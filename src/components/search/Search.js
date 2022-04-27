@@ -6,11 +6,11 @@ const Search = () => {
     <div className='container mx-auto'>
       <div className='search'>
         <input
-          className='p-3 outline-none max-w-xl'
+          className='search__input'
           placeholder='Cari username disini'
         />
         <button
-          className='p-3 bg-red-800 hover:bg-red-700 text-white px-8 w-full md:w-auto'
+          className='search__button'
         >
           Search
         </button>
