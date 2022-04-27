@@ -14,3 +14,11 @@
 [Heroicons](https://heroicons.com/)
 
 [BEM](http://getbem.com/)
+
+## Screenshot
+### Home
+![Screenshot](sc/1.png)
+### Search
+![Screenshot](sc/2.png)
+### Detail
+![Screenshot](sc/1.png)
