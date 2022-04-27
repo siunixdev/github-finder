@@ -5,7 +5,7 @@
 
 [React Router](https://reactrouter.com/docs/en/v6/getting-started/overview/)
 
-[TailwindCSS](Tailwindcss.com/)
+[TailwindCSS](https://tailwindcss.com/)
 
 [Sass](https://sass-lang.com/)
 
