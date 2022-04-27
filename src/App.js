@@ -1,9 +1,13 @@
 import logo from './logo.svg';
+import './App.sass'
+import Navbar from './components/navbar/Navbar';
+import Search from './components/search/Search';
 
 function App() {
   return (
-    <div className="">
-      Github Finder
+    <div className="App">
+      <Navbar />
+      <Search />
     </div>
   );
 }
