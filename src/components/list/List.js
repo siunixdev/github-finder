@@ -2,22 +2,30 @@ import React from 'react'
 import Card from '../card/Card'
 import './List.sass'
 import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const List = () => {
   const navigate = useNavigate()
+  const list = useSelector(state => state.gitState.list)
 
   return (
     <div className='container mx-auto'>
       <div className='list'>
-        <Card>
-          <div className='list__body' onClick={() => navigate('/detail')}>
-            <img
-              src='https://avatars.githubusercontent.com/u/51237?v=4'
-              className='list__image'
-            />
-            <span className='lits__name'>login Name</span>
-          </div>
-        </Card>
+        {
+          list ? list.map((data, i) => (
+            <Card key={i}>
+              <div className='list__body' onClick={() => navigate(`/detail/${data.login}`)}>
+                <img
+                  src={data.avatar_url}
+                  className='list__image'
+                />
+                <span className='lits__name'>{data.login}</span>
+              </div>
+            </Card>
+          )) : (
+            <div>No Data</div>
+          )
+        }
       </div>
     </div>
   )

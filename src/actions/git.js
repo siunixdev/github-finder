@@ -23,7 +23,6 @@ export const gitRepoList = (payload) => ({
 export const gitAccountList = (keyword) => {
   return (dispatch) => {
     return new Promise((resolve, reject) => {
-      let data = new Object()
       apiClient.get(`search/users?q=${keyword}`)
         .then(res => {
           dispatch(gitList({
@@ -33,6 +32,46 @@ export const gitAccountList = (keyword) => {
           resolve()
         }).catch(err => {
           dispatch(gitList({
+            'data': null
+          }))
+        })
+
+    })
+  }
+}
+
+export const gitAccountDetail = (keyword) => {
+  return (dispatch) => {
+    return new Promise((resolve, reject) => {
+      apiClient.get(`users/${keyword}`)
+        .then(res => {
+          dispatch(gitDetail({
+            'data': res.data
+          }))
+
+          resolve()
+        }).catch(err => {
+          dispatch(gitDetail({
+            'data': null
+          }))
+        })
+
+    })
+  }
+}
+
+export const gitAccountRepoList = (keyword) => {
+  return (dispatch) => {
+    return new Promise((resolve, reject) => {
+      apiClient.get(`users/${keyword}/repos?sort=pushed&direction=desc`)
+        .then(res => {
+          dispatch(gitRepoList({
+            'data': res.data
+          }))
+
+          resolve()
+        }).catch(err => {
+          dispatch(gitRepoList({
             'data': null
           }))
         })

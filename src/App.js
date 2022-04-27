@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.sass'
 import {
   BrowserRouter,
@@ -16,7 +15,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/detail' element={<Detail />} />
+          <Route path='/detail/:user' element={<Detail />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -6,12 +6,7 @@ import {
 
 const initialState = {
   list: null,
-  detail: {
-    username: null,
-    email: null,
-    location: null,
-    avatar: null,
-  },
+  detail: null,
   repoList: null
 }
 
@@ -24,11 +19,13 @@ const gitReducer = (state = initialState, actions) => {
       }
     case `${GIT_DETAIL}`:
       return {
-        ...state
+        ...state,
+        detail: actions.data
       }
     case `${GIT_REPO_LIST}`:
       return {
-        ...state
+        ...state,
+        repoList: actions.data
       }
     default:
       return {
