@@ -1,2 +1,8 @@
 .list
   @apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 p-4
+  &__body
+    @apply flex flex-col justify-center items-center space-y-4 cursor-pointer w-full
+  &__name
+    @apply text-gray-700 text-sm
+  &__image
+    @apply h-24 w-24 bg-white rounded-full border shadow-lg object-cover object-center

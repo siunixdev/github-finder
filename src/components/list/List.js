@@ -7,11 +7,13 @@ const List = () => {
     <div className='container mx-auto'>
       <div className='list'>
         <Card>
-          <img
-            src=''
-            className='h-32'
-          />
-          <span className='text-gray-700 text-sm'>login</span>
+          <div className='list__body' onClick={() => alert("Detail")}>
+            <img
+              src='https://avatars.githubusercontent.com/u/51237?v=4'
+              className='list__image'
+            />
+            <span className='lits__name'>login Name</span>
+          </div>
         </Card>
       </div>
     </div>
