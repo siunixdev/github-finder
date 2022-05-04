@@ -21,4 +21,4 @@
 ### Search
 ![Screenshot](sc/2.png)
 ### Detail
-![Screenshot](sc/1.png)
+![Screenshot](sc/3.png)
